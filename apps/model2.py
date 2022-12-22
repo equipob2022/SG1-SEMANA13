@@ -12,6 +12,7 @@ import plotly.graph_objects as go
 
 def app():
     st.title('Model 2 - Logistic Regression')
+    yf.pdr_override()
     
     #start = '2004-08-18'
     #end = '2022-01-20'
