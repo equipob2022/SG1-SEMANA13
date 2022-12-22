@@ -2,7 +2,8 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-import pandas_datareader as datas
+from pandas_datareader import data as pdr
+import yfinance as yf
 from sklearn.linear_model import LogisticRegression
 from sklearn import metrics
 from sklearn.metrics import confusion_matrix
@@ -23,7 +24,7 @@ def app():
 
     user_input = st.text_input('Introducir cotización bursátil' , 'NTDOY')
 
-    df = datas.DataReader(user_input, 'yahoo', start, end)
+    df2 = pdr.get_data_yahoo([user_input], start,end)
     
     # Describiendo los datos
     st.subheader('Datos del 2004 al 2022') 
