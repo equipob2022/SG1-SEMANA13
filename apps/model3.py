@@ -7,10 +7,12 @@ from sklearn.preprocessing import MinMaxScaler
 from keras.models import Sequential
 from keras.layers import Dense, Dropout,GRU
 from keras import optimizers 
-import pandas_datareader as datas
+from pandas_datareader import data as pdr
+import yfinance as yf
 
 def app():
     st.title('Model 3 - GRU')
+    yf.pdr_override()
     #start = '2019-08-18'
     #end = '2022-01-20'
     start = st.date_input('Start' , value=pd.to_datetime('2019-08-18'))
@@ -20,7 +22,7 @@ def app():
 
     user_input = st.text_input('Introducir cotización bursátil' , 'NTDOY')
 
-    df = datas.DataReader(user_input, 'yahoo', start, end)
+    df = pdr.get_data_yahoo([user_input], start,end)
     
     # Describiendo los datos
     st.subheader('Tabla de datos') 
