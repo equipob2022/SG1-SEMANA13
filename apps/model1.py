@@ -14,7 +14,7 @@ import datetime
 
 def app():
     st.title('Model 1 - SVR')
-    
+    yf.pdr_override()
     #start = '2019-08-18'
     #end = '2022-01-20'
     start = st.date_input('Start' , value=pd.to_datetime('2019-08-18'))
