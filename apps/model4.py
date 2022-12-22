@@ -2,7 +2,8 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-import pandas_datareader as datas
+from pandas_datareader import data as pdr
+import yfinance as yf
 import plotly.express as px
 import plotly.graph_objects as go
 from statsmodels.tsa.seasonal import seasonal_decompose
@@ -12,7 +13,7 @@ import warnings
 
 def app():
     st.title('Model 4 - ARIMA')
-    
+    yf.pdr_override()
     #start = '2004-08-18'
     #end = '2022-01-20'
     start = st.date_input('Start' , value=pd.to_datetime('2004-08-18'))
@@ -21,7 +22,7 @@ def app():
     st.title('Predicción de tendencia de acciones')
     user_input = st.text_input('Introducir cotización bursátil' , 'NTDOY')
 
-    df = datas.DataReader(user_input, 'yahoo', start, end)
+    df = pdr.get_data_yahoo([user_input], start,end)
     df["Date"] = df.index
     # Candlestick chart
     st.subheader('Gráfico Financiero de la data') 
