@@ -24,7 +24,7 @@ def app():
 
     user_input = st.text_input('Introducir cotización bursátil' , 'NTDOY')
 
-    df2 = pdr.get_data_yahoo([user_input], start,end)
+    df = pdr.get_data_yahoo([user_input], start,end)
     
     # Describiendo los datos
     st.subheader('Datos del 2004 al 2022') 
