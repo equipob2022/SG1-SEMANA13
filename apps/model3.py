@@ -214,6 +214,4 @@ def app():
     plt.legend()
     st.pyplot(fig7)
 
-    st.write('Como se puede observar según los resultados obtenidos, la pérdida de train y validación, no fluctúa ni se sobreajustan (overfitting), por lo que se puede decir que la predicción del modelo puede predecir el precio de cierre de la datos elegida bastante bien. Después de compilar el modelo, este se implementó en el conjunto de prueba que se ha participado anteriormente.Luego, evaluando el modelo de predicción con RMSE y MAPE, en base a los resultados obtenidos, el modelo muestra como resultado de RMSE de 3.1693 y MAPE de 24.186 % (Precisión : 75.8%). Después de eso, se ubicó una tabla y un gráfico de la comparación de los resultados de la predicción con los datos de prueba reales, tras ello se puede observar en el gráfico, los resultados de la predicción pueden seguir el movimiento del conjunto de prueba con un margen de diferencia mínima.
-')
-
+ 
