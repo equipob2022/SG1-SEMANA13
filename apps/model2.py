@@ -142,3 +142,4 @@ def app():
     )
     st.plotly_chart(fig)
     
+    st.write('Generalmente para la predicción de algún atributo en específico se usa diferentes modelos de regresión pero por qué recurrir al modelo de Regresión Logística si existen modelos de rendimiento más alto, pues como fue demostrado con los resultados obtenidos tras la elaboración del colab, existe una mínima diferencia entre la precisión del entrenamiento y la validación, de esta manera se evita el sobreajuste (overfitting). Se puede observar que la precisión alcanzada por el modelo de LR de última generación no es mejor que simplemente adivinar con una probabilidad del 53%. Las posibles razones de esto pueden ser la falta de datos o el uso de un modelo muy simple para realizar una tarea tan compleja como la predicción del mercado de valores.')
