@@ -88,3 +88,5 @@ def app():
         color="modelo"
     )
     st.plotly_chart(fig)
+    
+    st.write(El modelo de regresión de vectores de soporte busca predecir el precio de las acciones de Nintendo Co. tras el modelado y predicción del modelo considerando tanto los inicios de la compañía, donde los valores de las acciones eran muy cambiantes, como la actualidad, donde existe un crecimiento constante de los precios, los valores predichos estaban acorde a lo que se esperaba de los posibles precios.)
